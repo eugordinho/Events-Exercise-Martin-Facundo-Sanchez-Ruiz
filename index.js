@@ -22,9 +22,22 @@ $button.addEventListener("click", () => {
         
         $colorSquare.classList.add( "bg-blue-800" )
         
+        $colorSquare.textContent = "BLUE"
     }
 
 }) 
 
 
 
+const $textInput = document.getElementById( 'inputText' )
+
+const $textContent = document.getElementById( 'textContent' )
+
+const $resetButton = document.getElementById( 'resetButton')
+
+$textInput.addEventListener( "input", () => $textContent.textContent = $textInput.value )
+
+$resetButton.addEventListener( "click", () => {
+    $textContent.textContent = ""
+    $textInput.value= ""
+})
